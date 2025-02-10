@@ -8,5 +8,5 @@ import retrofit2.http.GET
 interface ApiService {
 
     @GET(BuildConfig.get_recipes)
-    suspend fun fetchRecipes(): Response<List<RecipeEntity>>
+    suspend fun fetchRecipes(): Response<List<RecipeEntity>?>
 }

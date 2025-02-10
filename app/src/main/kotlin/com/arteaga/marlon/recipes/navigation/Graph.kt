@@ -21,7 +21,7 @@ fun NavGraphBuilder.graph(
         route = NavigationHost.InitNavHost.route
     ) {
         composable(NavigationScreen.HomeScreen.screen) {
-            HomeScreen(state, goToDetail)
+            HomeScreen(state, goToDetail, state().getData)
         }
         composable(NavigationScreen.DetailScreen.screen) {
             DetailScreen(state().selectedRecipe, goToMaps)

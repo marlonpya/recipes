@@ -32,7 +32,7 @@ class ConfigLibraryPlugin : Plugin<Project> {
         tasks {
             withType(KotlinCompile::class.java) {
                 kotlinOptions {
-                    jvmTarget = JavaVersion.VERSION_17.toString()
+                    jvmTarget = JavaVersion.VERSION_21.toString()
                     freeCompilerArgs = freeCompilerArgs + AndroidBuildConfig.requiresOptIn
                 }
             }
@@ -72,8 +72,8 @@ class ConfigLibraryPlugin : Plugin<Project> {
                 }
 
                 compileOptions {
-                    sourceCompatibility = JavaVersion.VERSION_17
-                    targetCompatibility = JavaVersion.VERSION_17
+                    sourceCompatibility = JavaVersion.VERSION_21
+                    targetCompatibility = JavaVersion.VERSION_21
                 }
 
                 packagingOptions {

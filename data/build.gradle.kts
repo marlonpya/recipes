@@ -16,6 +16,7 @@ dependencies {
     testImplementation(libs.bundles.test)
     androidTestImplementation(libs.bundles.library.androidTest)
     androidTestImplementation(libs.bundles.retrofit2)
+    implementation(libs.converter.gson)
 
     kaptAndroidTest(libs.bundles.kapt)
     implementation(project(":domain"))

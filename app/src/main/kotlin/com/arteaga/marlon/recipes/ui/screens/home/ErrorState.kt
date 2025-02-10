@@ -5,6 +5,7 @@ import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.MutableTransitionState
 import androidx.compose.animation.expandHorizontally
 import androidx.compose.animation.shrinkHorizontally
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -26,7 +27,7 @@ import com.arteaga.marlon.recipes.R
 import com.arteaga.marlon.recipes.utils.TestsUtil
 
 @Composable
-fun ErrorState(isVisible: Boolean) {
+fun ErrorState(isVisible: Boolean, retry: () -> Unit = {}) {
     AnimatedVisibility(
         visibleState = MutableTransitionState(isVisible),
         enter = expandHorizontally(),
@@ -34,7 +35,9 @@ fun ErrorState(isVisible: Boolean) {
     ) {
         Box(modifier = Modifier.fillMaxSize()) {
             Row(
-                Modifier.fillMaxSize(),
+                Modifier.fillMaxSize().clickable {
+                    retry()
+                },
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.Center,
             ) {

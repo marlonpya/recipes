@@ -2,8 +2,8 @@
 package com.arteaga.marlon.configuration.constants
 
 object AndroidBuildConfig {
-    const val composeVersion = "1.4.3"
-    const val compileSdk = 34
+    const val composeVersion = "1.5.7"
+    const val compileSdk = 35
     const val targetSdk = 33
     const val minSdk = 24
     const val basePackage = "com.arteaga.marlon"

@@ -29,6 +29,7 @@ class RecipeViewModel @Inject constructor(
         get() = _state
 
     init {
+        _state.value = state.value.copy(getData = ::getData)
         getData()
     }
 

@@ -15,6 +15,7 @@ import com.arteaga.marlon.recipes.utils.TestsUtil
 fun HomeScreen(
     state: () -> RecipeData,
     goToDetail: Function<Recipe?, Unit>,
+    retry: () -> Unit,
 ) {
     Column(
         modifier = Modifier.clearAndSetSemantics {
@@ -23,7 +24,7 @@ fun HomeScreen(
     ) {
         TitleAppBar()
 
-        ErrorState(state().isErrorVisible)
+        ErrorState(state().isErrorVisible, retry)
 
         LoadingState(state().isLoadingVisible)
 

@@ -7,12 +7,11 @@ plugins {
 
 android {
     namespace = "com.arteaga.marlon.test.app"
-    compileSdk = 34
+    compileSdk = 35
     targetProjectPath = ":app"
 
     defaultConfig {
         minSdk = 24
-        targetSdk = 34
 
         testInstrumentationRunner = "com.arteaga.marlon.domain.HiltTestRunner"
     }
@@ -25,12 +24,12 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
 
     kotlinOptions {
-        jvmTarget = "17"
+        jvmTarget = "21"
     }
 }
 
@@ -46,7 +45,7 @@ dependencies {
 
     // Hilt and instrumented tests.
     implementation(libs.hilt.android.testing)
-    kapt(libs.hilt.android.compiler)
+    kapt(libs.google.dagger.compiler)
 
     // Compose
     implementation(libs.compose.ui.test.junit4)
