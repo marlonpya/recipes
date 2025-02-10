@@ -1,0 +1,8 @@
+<resources>
+    <string name="error_image">error_image</string>
+    <string name="error_image_url">https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Error.svg/1200px-Error.svg.png</string>
+    <string name="empty_text">There are no recipes available at this time.</string>
+    <string name="item_image">item_image</string>
+    <string name="card_description">%1$s\n Likes: %2$d \n Ingredients: %3$d</string>
+    <string name="icon_maps">icon_camps</string>
+</resources>
